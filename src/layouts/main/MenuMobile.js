@@ -7,14 +7,15 @@ import arrowIosForwardFill from '@iconify/icons-eva/arrow-ios-forward-fill';
 import arrowIosDownwardFill from '@iconify/icons-eva/arrow-ios-downward-fill';
 // material
 import { alpha, styled } from '@material-ui/core/styles';
-import { Box, List, Drawer, Link, Collapse, ListItemButton, ListItemText, ListItemIcon } from '@material-ui/core';
+import { Box, List, Drawer, Link, Collapse, ListItemButton, ListItemText, ListItemIcon, Button } from '@material-ui/core';
 // components
 import Logo from '../../components/Logo';
 import NavSection from '../../components/NavSection';
 import Scrollbar from '../../components/Scrollbar';
 import { MIconButton } from '../../components/@material-extend';
-//
 import menuConfig from './MenuConfig';
+// Connect wallet
+import { connectWallet } from "utils/interact"
 
 // ----------------------------------------------------------------------
 
@@ -111,7 +112,7 @@ function MenuMobileItem({ item, isOpen, isActive, onOpen, handleDrawerClose }) {
   return (
     <ListItemStyle
       key={title}
-      onClick={() => { 
+      onClick={() => {
         window.location.href = `${path}`
         handleDrawerClose()
       }}
@@ -140,6 +141,7 @@ export default function MenuMobile({ isOffset, isHome }) {
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [walletAddress, setWalletAddress] = useState("");
 
   useEffect(() => {
     if (mobileOpen) {
@@ -192,10 +194,41 @@ export default function MenuMobile({ isOffset, isHome }) {
                 isOpen={open}
                 onOpen={handleOpen}
                 isActive={pathname === link.path}
-                handleDrawerClose = {handleDrawerClose}
+                handleDrawerClose={handleDrawerClose}
               />
             ))}
           </List>
+
+          <Button
+            onClick={connectWallet}
+            sx={{
+              backgroundColor: '#d4e611',
+              fontSize: '18px',
+              fontStyle: 'italic',
+              letterSpacing: '0px',
+              lingHeight: '307px',
+              color: 'black',
+              fontFamily: "'Michroma', sans-serif",
+              width: '150px',
+              height: '34px',
+              borderRadius: '17px',
+              filter: 'drop-shadow(0px 10px 30px rgba(2,3,2,0.94))',
+              "&:hover": {
+                color: 'white',
+                backgroundColor: '#d4e611'
+              }
+            }}>
+            {
+              walletAddress.length > 0 ? (
+                String(walletAddress).substring(0, 6) +
+                '...' +
+                String(walletAddress).substring(38) +
+                ')'
+              ) : (
+                <span>Connect Wallet</span>
+              )
+            }
+          </Button>
         </Scrollbar>
       </Drawer>
     </>
