@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Roboto'), url('./Roboto-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Eurostile Ext';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Eurostile Ext'), url('./EurostileExtended.ttf') format('truetype');
+}
