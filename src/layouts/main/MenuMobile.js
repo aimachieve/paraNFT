@@ -203,13 +203,13 @@ export default function MenuMobile({ isOffset, isHome }) {
             onClick={connectWallet}
             sx={{
               backgroundColor: '#d4e611',
-              fontSize: '18px',
+              fontSize: {xs: '12px', md: '18px'},
               fontStyle: 'italic',
               letterSpacing: '0px',
               lingHeight: '307px',
               color: 'black',
               fontFamily: "'Michroma', sans-serif",
-              width: '150px',
+              width: '160px',
               height: '34px',
               borderRadius: '17px',
               filter: 'drop-shadow(0px 10px 30px rgba(2,3,2,0.94))',

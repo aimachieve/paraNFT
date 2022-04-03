@@ -44,7 +44,7 @@ export default function LandingStaking() {
             <Button sx={{
                 width: { xs: '180px', md: '315px' },
                 height: { xs: '30px', md: '63px' },
-                fontSize: { xs: '18px', md: '45px' },
+                fontSize: { xs: '18px', md: '36px' },
               borderRadius: '20px',
               filter: 'drop-shadow(0px 10px 30px rgba(2,3,2,0.94))',
               backgroundColor: '#d4e611',
