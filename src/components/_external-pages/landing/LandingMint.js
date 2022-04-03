@@ -7,7 +7,6 @@ import { varFadeInUp, MotionInView } from '../../animate';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  height: '700px',
   margin: theme.spacing(14, 0, 0, 0),
   background: 'url(/assets/para/camp.jpg)',
   backgroundRepeat: 'no-repeat',
@@ -21,10 +20,12 @@ export default function LandingMint() {
 
   return (
     <RootStyle id="mint">
-      <Stack spacing={5} alignItems="center" justifyContent={'center'} sx={{ height: '100%' }}>
+      <Stack spacing={5} alignItems="center" justifyContent={'center'} sx={{
+        height: { xs: '200px', md: '700px' },
+      }}>
         <MotionInView variants={varFadeInUp}>
           <Typography sx={{
-            fontSize: '65px',
+            fontSize: { xs: '25px', md: '65px' },
             letterSpacing: '-1px',
             color: '#ffffff',
             fontFamily: "'Michroma', sans-serif",
@@ -38,13 +39,13 @@ export default function LandingMint() {
           <Stack direction="row" spacing={3}>
             <Button
               sx={{
-                width: '393px',
-                height: '78px',
+                width: { xs: '150px', md: '393px' },
+                height: { xs: '30px', md: '78px' },
+                fontSize: { xs: '18px', md: '45px' },
                 borderRadius: '20px',
                 filter: `drop-shadow(0px 10px 30px rgba(2,3,2,0.94))`,
                 backgroundImage: `linear-gradient(0deg, #8e9b07 0%, #c3d216 100%)`,
                 border: `4px solid #f1f1f1`,
-                fontSize: '45px',
                 letterSpacing: '-1px',
                 lineHeight: '713px',
                 color: "#000000",
@@ -60,13 +61,13 @@ export default function LandingMint() {
             </Button>
             <Button
               sx={{
-                width: '393px',
-                height: '78px',
+                width: { xs: '150px', md: '393px' },
+                height: { xs: '30px', md: '78px' },
+                fontSize: { xs: '18px', md: '45px' },
                 borderRadius: '20px',
                 filter: `drop-shadow(0px 10px 30px rgba(2,3,2,0.94))`,
                 backgroundImage: `linear-gradient(0deg, #8e9b07 0%, #c3d216 100%)`,
                 border: `4px solid #f1f1f1`,
-                fontSize: '45px',
                 letterSpacing: '-1px',
                 lineHeight: '713px',
                 color: "#000000",

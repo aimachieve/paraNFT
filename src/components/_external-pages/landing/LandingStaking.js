@@ -22,7 +22,7 @@ export default function LandingStaking() {
         <MotionInView variants={varFadeInUp}>
           <Stack alignItems={'center'} spacing={1}>
             <Typography sx={{
-              fontSize: '65px',
+              fontSize: {xs: '35px', md: '65px'},
               letterSpacing: '-1px',
               color: '#d5e518',
               fontFamily: "'Michroma', sans-serif",
@@ -32,7 +32,7 @@ export default function LandingStaking() {
               NFT STAKING
             </Typography>
             <Typography sx={{
-              fontSize: '29px',
+              fontSize: {xs: '20px', md: '29px'},
               letterSpacing: '-1px',
               color: '#ffffff',
               fontFamily: "'Michroma', sans-serif",
@@ -42,12 +42,12 @@ export default function LandingStaking() {
               COMING SOON...
             </Typography>
             <Button sx={{
-              width: '315px',
-              height: '63px',
+                width: { xs: '180px', md: '315px' },
+                height: { xs: '30px', md: '63px' },
+                fontSize: { xs: '18px', md: '45px' },
               borderRadius: '20px',
               filter: 'drop-shadow(0px 10px 30px rgba(2,3,2,0.94))',
               backgroundColor: '#d4e611',
-              fontSize: '36px',
               letterSpacing: '-1px',
               color: '#1b1b1b',
               fontFamily: "'Michroma', sans-serif",

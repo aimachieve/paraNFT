@@ -43,12 +43,12 @@ export default function LandingAdvanced() {
                   <Stack justifyContent={'center'} >
                     <Typography
                       sx={{
-                        fontSize: '65px',
+                        fontSize: {xs: '35px', md: '65px'},
                         letterSpacing: '-1px',
                         color: '#cddd17',
                         fontFamily: "'Michroma', sans-serif",
-                        textAlign: 'left',
-                        mt: 16,
+                        textAlign: {xs: 'center', md: 'left'},
+                        mt: '15%',
                         fontStyle: 'italic',
                         fontWeight: 'bold'
                       }}

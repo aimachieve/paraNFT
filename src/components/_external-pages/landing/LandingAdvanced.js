@@ -32,7 +32,7 @@ export default function LandingAdvanced() {
             <Stack justifyContent={'center'} alignItems={'center'} spacing={2}>
               <MotionInView variants={varFadeInUp}>
                 <Typography sx={{
-                  fontSize: '65px',
+                  fontSize: {xs: '35px', md: '65px'},
                   letterSpacing: '-1px',
                   color: '#ffffff',
                   fontFamily: "'Michroma', sans-serif",
@@ -45,8 +45,6 @@ export default function LandingAdvanced() {
               </MotionInView>
               <MotionInView variants={varFadeInUp}>
                 <Typography sx={{
-                  width: '790px',
-                  height: '142px',
                   fontSize: '16px',
                   letterSpacing: '0px',
                   lineHeight: '24px',
@@ -82,11 +80,11 @@ export default function LandingAdvanced() {
                   <Stack justifyContent={'center'} >
                     <Typography
                       sx={{
-                        fontSize: '65px',
+                        fontSize: {xs: '35px', md: '65px'},
                         letterSpacing: '-1px',
                         color: '#cddd17',
                         fontFamily: "'Michroma', sans-serif",
-                        textAlign: 'left',
+                        textAlign: {xs: 'center', md: 'left'},
                         mt: 10,
                         fontStyle: 'italic',
                         fontWeight: 'bold'
